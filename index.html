@@ -1,0 +1,77 @@
+<!Doctype html>
+<html lang="fr-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="connet.css">
+    <link rel="icon" href="logo.png">
+</head>    
+<body>
+    <div class="iphone">
+        <div class="iphone-screen">
+            <div class="notch"></div>
+            <div class="content">
+                <div class="overflow">
+                    <div class="card-head">
+                        <img src="logo.png" alt="logo" width="60px">
+                        <p class="logo">Ecole Moderne</p>
+                        <h1>CONNEXION <p>Veuillez remplire les champs pour connecte parce que si vous ne rempli pas y aura pas moyens de vous identifier</p></h1>
+                        <div class="champs">
+                            <form action="" method="" onclick="return envoie()">
+                                <div class="from-group">
+                                    <label>Gmail</label>
+                                    <input type="text" name="" id="" placeholder="Example@gmail.com" required>
+                                </div>
+
+                                <div class="from-group">
+                                    <label>Password</label>
+                                    <input type="password" name="" id="" placeholder="Ecrit ton mot de passe" required>
+                                </div>
+                                <div class="card">
+                                    <a href="">Forgot your password ?</a>
+                                </div>
+                                <button type="submit">Connecte</button>
+                            </form>
+                        </div>
+                        <div class="card-main">
+                            <a href="budgetInscription.html">Your don't have acount ?</a>
+                            <p>Merci de se connecter sur notre page, <br> car une bonne education affecte l'avenir de notre pays</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+            // CALCULE AGE D'ELEVE
+    let age_eleve = 0;
+                
+    if(date_naissance !== "") {
+        let aujourdhui = new Date();
+        let naissance = new Date(date_naissance);
+            
+        age_eleve = aujourdhui.getFullYear() - naissance.getFullYear();
+        let mois_eleve = aujourdhui.getMonth() - naissance.getMonth();
+                    
+        if(mois_eleve < 0 || (mois_eleve === 0 && aujourdhui.getDate() < naissance.getDate())) {
+            age_eleve--;
+        }
+    }
+
+    // CALCULE AGE TUTEUR OU PARENT
+    let age = 0;
+    if(date_naitre !== "") {
+        let aujourd_hui = new Date();
+        let naissante = new Date(date_naitree);
+            
+        age = aujourd_hui.getFullYear() - naissante.getFullYear();
+        let mois = aujourd_hui.getMonth() - naissante.getMonth();
+
+        if(mois < 0 || (mois === 0 && aujourd_hui.getDate() < naissante.getDate())) {
+        age--;
+        }
+    }
+    </script>
+</body>
+</html>
